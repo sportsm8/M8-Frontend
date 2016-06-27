@@ -39,7 +39,7 @@ var minifyCSS = require('gulp-minify-css');
 var minifyJS = require('gulp-uglify');
 
 // Autoprefix for browser-compatibility
-var autoprefix = require('gulp-autoprefixer');
+//var autoprefix = require('gulp-autoprefixer');
 
 
 
@@ -149,7 +149,7 @@ gulp.task('scssWatch', function(){
         }))
         .pipe(sass())
         .pipe(concat('main.css'))
-        .pipe(autoprefix('last 2 versions'))
+        //.pipe(autoprefix('last 2 versions'))
         .pipe(minifyCSS())
         .pipe(gulp.dest('./build/css/'))
         .pipe(notify({
